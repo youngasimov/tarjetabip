@@ -11,7 +11,7 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "                    <label for=\"bipInput\">Número de tarjeta Bip:</label>\n" +
     "                    <div class=\"input-group\">\n" +
     "                        <span class=\"input-group-addon\"><i class=\"fa fa-credit-card\"></i></span>\n" +
-    "                        <input type=\"text\" class=\"form-control\" id=\"bipInput\" placeholder=\"Tarjeta Bip\" ng-model=\"bip\" required>\n" +
+    "                        <input type=\"text\" class=\"form-control\" id=\"bipInput\" placeholder=\"Tarjeta Bip!\" ng-model=\"bip\" required>\n" +
     "                    </div>\n" +
     "                    \n" +
     "                </div>\n" +
