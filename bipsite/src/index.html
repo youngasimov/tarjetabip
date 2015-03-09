@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="saldoBip" ng-controller="AppCtrl">
+    <head>
+        <title> Saldo Bip </title>
+
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+        <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+        <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+        <script type="text/javascript" src="<%= file %>"></script><% }); %>
+    </head>
+    <body>
+
+
+        <div class="desktop-background">
+            <vid-bg resources="video.resources" poster="video.poster" full-screen="video.fullscreen" muted="video.muted" z-index="video.z" pause-play="video.pause"></vid-bg>
+        </div>
+
+        <div class="overlay" ng-show="!video.pause"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10">
+                    <h1 class="text-left">Saldo BIP <small>Transantiago</small></h1>
+                </div>
+            </div>
+            <div class="view-container">
+                <div ui-view class="reveal-animation"></div>
+            </div>
+            
+        </div>
+
+        <button type="button" class="btn btn-danger media-btn" ng-click="toggleMedia()"> <span class="showOnOver"> {{mediaAction}} </span> <span ng-class="mediaIcon" class='glyphicon'></span> </button>
+    </body>
+</html>

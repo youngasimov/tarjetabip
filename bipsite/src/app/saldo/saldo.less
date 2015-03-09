@@ -1,0 +1,49 @@
+.wait{
+    display:block;
+    margin-top: 18%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-size: 40px;
+    width: 200px;
+    height: 200px;
+    color:white;
+}
+
+.saldo{
+    h2,h3{   
+        text-align: center;
+    }
+}
+
+.volver{
+    margin-top: 50px;
+}
+
+.animate-text, .animate-btn{
+    
+    position: relative;
+    
+}
+.animate-text.ng-hide-add.ng-hide-add-active,
+.animate-text.ng-hide-remove.ng-hide-remove-active {
+    -webkit-animation: enter_animation 500ms ease-in-out; /* Safari/Chrome */
+    animation: enter_animation 500ms ease-in-out; /* IE10+ and Future Browsers */
+}
+
+.animate-btn.ng-hide-add.ng-hide-add-active,
+.animate-btn.ng-hide-remove.ng-hide-remove-active {
+    -webkit-animation: enter_animation 800ms ease-in-out; /* Safari/Chrome */
+    animation: enter_animation 800ms ease-in-out; /* IE10+ and Future Browsers */
+}
+
+@-webkit-keyframes enter_animation {
+    from { left:-1000px; }
+    to { left:0px; }
+}
+@keyframes enter_animation {
+    from { left:-1000px; }
+    to { left:0px; }
+}
+
+

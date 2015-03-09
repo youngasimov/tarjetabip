@@ -2,23 +2,16 @@
 
 require_once 'HTTP/Request2.php';
 require 'vendor/autoload.php';
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(-1);
 
 $app = new \Slim\Slim();
-$app->get('/saldo', function () use ($app){
-    $bip = $app->request->get('bip');
-    $rut = $app->request->get('rut');
+$app->get('/saldo/:bip', function ($bip) use ($app) {
     $bloqueable = "0";
-    if($bip == null){
+    $output = array();
+    if ($bip == null) {
         $app->response->setStatus(400);
-        echo "{error:'ingrese el código de la tarjeta'}";
+        $output['error'] = 'ingrese el código de la tarjeta';
+        echo json_encode($output);
         return;
-    }
-    if($rut == null){
-        $rut = '0';
-        $bloqueable = "";
     }
     $fields = array(
         'accion' => '6',
@@ -26,28 +19,32 @@ $app->get('/saldo', function () use ($app){
         'NomUsuario' => 'usuInternet',
         'NomHost' => 'AFT',
         'NomDominio' => 'aft.cl',
-        'RutUsuario' => $rut,
+        'RutUsuario' => '0',
         'NumTarjeta' => $bip,
-        'bloqueable' => $bloqueable);
+        'bloqueable' => '');
     $r = new HTTP_Request2('http://pocae.tstgo.cl/PortalCAE-WAR-MODULE/SesionPortalServlet', HTTP_Request2::METHOD_POST);
     $r->addPostParameter($fields);
     $html = $r->send()->getBody();
-    //echo $html;
     $coincidencias = null;
     $encontrado = preg_match_all("/\\$([0-9]|\.)+/", $html, $coincidencias);
     $app->response->headers->set('Content-Type', 'application/json');
+    $app->response->headers->set('Access-Control-Allow-Origin', $app->request->headers->get('Origin'));
+
     try {
         if ($encontrado) {
             $saldo = substr($coincidencias[0][0], 1);
             $app->response->setStatus(200);
-            echo "{saldo:".$saldo."}";
+            $output['saldo'] = $saldo;
+            echo json_encode($output);
         } else {
             $app->response->setStatus(404);
-            echo "{error:'no se registra saldo en esta tarjeta'}";
+            $output['error'] = 'no se registra saldo en esta tarjeta';
+            echo json_encode($output);
         }
     } catch (HttpException $hex) {
         $app->response->setStatus(500);
-        echo "{error:'ocurrio un error ineseperado en el servidor'}";
+        $output['error'] = 'ocurrio un error ineseperado en el servidor';
+        echo json_encode($output);
     }
 });
 $app->run();

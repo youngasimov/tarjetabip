@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="wait" ng-show="wait">
+            <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+        <div class="saldo animate-text" ng-hide="wait">
+            <h2 ng-if="!error">Tu saldo es de <strong ng-class="textColor">${{saldo}}</strong> pesos</h2>
+            <h3 ng-if="error" class="text-danger">{{mensaje}}</strong></h3>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 text-center animate-btn" ng-hide="wait">
+    <button type="button" ui-sref="home" class="btn btn-primary volver"><i class="fa fa-chevron-circle-left"></i> Realizar otra busqueda </button>
+</div>

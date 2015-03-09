@@ -1,0 +1,24 @@
+<div class="row formulario">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+        <div class="row background">
+
+            <form ng-submit="getSaldo(bip)">
+                <div class="form-group form-group-lg">
+                    <label for="bipInput">Número de tarjeta Bip:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                        <input type="text" class="form-control" id="bipInput" placeholder="Tarjeta Bip" ng-model="bip" required>
+                    </div>
+                    
+                </div>
+                <button ng-disabled="wait" type="submit" class="btn btn-primary pull-right">Consultar saldo <i class="fa fa-search"></i></button>
+            </form>
+            <div class="wait" ng-show="wait">
+                <div class="inner-wait">
+                    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

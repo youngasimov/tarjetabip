@@ -1,0 +1,191 @@
+/**
+ * These are the variables used throughout the application. This is where 
+ * overwrites that are not specific to components should be maintained.
+ */
+
+/**
+ * Typography-related.
+ */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Italic-webfont.eot');
+    src: url('fonts/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Italic-webfont.woff') format('woff'),
+         url('fonts/Roboto-Italic-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Italic-webfont.svg#RobotoItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold-webfont.eot');
+    src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Bold-webfont.svg#RobotoBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-BoldItalic-webfont.eot');
+    src: url('fonts/Roboto-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-BoldItalic-webfont.woff') format('woff'),
+         url('fonts/Roboto-BoldItalic-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-BoldItalic-webfont.svg#RobotoBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Thin-webfont.eot');
+    src: url('fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Thin-webfont.svg#RobotoThin') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/fonts/Roboto-ThinItalic-webfont.eot');
+    src: url('fonts/fonts/Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/fonts/Roboto-ThinItalic-webfont.woff') format('woff'),
+         url('fonts/fonts/Roboto-ThinItalic-webfont.ttf') format('truetype'),
+         url('fonts/fonts/Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Light-webfont.eot');
+    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Light-webfont.svg#RobotoLight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-LightItalic-webfont.eot');
+    src: url('fonts/Roboto-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-LightItalic-webfont.woff') format('woff'),
+         url('fonts/Roboto-LightItalic-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-LightItalic-webfont.svg#RobotoLightItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Medium-webfont.eot');
+    src: url('fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Medium-webfont.woff') format('woff'),
+         url('fonts/Roboto-Medium-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Medium-webfont.svg#RobotoMedium') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-MediumItalic-webfont.eot');
+    src: url('fonts/Roboto-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-MediumItalic-webfont.woff') format('woff'),
+         url('fonts/Roboto-MediumItalic-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-MediumItalic-webfont.svg#RobotoMediumItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+
+
+
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 75.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               #fff;
+//** Global text color on `<body>`.
+@text-color:            @gray-dark;
+
+//** Global textual link color.
+@link-color:            @brand-primary;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+//** Link hover decoration.
+@link-hover-decoration: underline;
+
+
+//== Typography
+
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+//@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamily: 'Roboto', sans-serif;
+@font-family-sans-serif:  'Roboto', sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    inherit;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+@icon-font-path:          "";
+@fa-font-path:        "../assets";
