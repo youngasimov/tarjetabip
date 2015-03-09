@@ -1,6 +1,6 @@
 var bipApiService = angular.module('bipApiService', ['ngResource']);
 
-var baseUrl = "http://localhost:8888/bip/index.php/";
+var baseUrl = "/bip/api/index.php/";
 
 bipApiService.service("saldoApi", ['$resource', function($resource) {
         var saldoApi = {};

@@ -5,7 +5,6 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\Slim();
 $app->get('/saldo/:bip', function ($bip) use ($app) {
-    $bloqueable = "0";
     $output = array();
     if ($bip == null) {
         $app->response->setStatus(400);
@@ -48,4 +47,3 @@ $app->get('/saldo/:bip', function ($bip) use ($app) {
     }
 });
 $app->run();
-?>
